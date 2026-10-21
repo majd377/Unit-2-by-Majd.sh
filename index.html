@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 2: Education for Success - Grade 11 Learning Hub</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- html2canvas for downloading CV as Image -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>English for Palestine - Grade 11</h1>
+        <p>Unit 2: Education for Success</p>
+        <div class="credits-container">
+            <span>Made by: <strong>Majd Shubair</strong></span>
+            <span>|</span>
+            <span>Under Supervision of: <strong>Mr. Raed Ballou</strong></span>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Navigation Tabs -->
+        <div class="nav-tabs">
+            <button class="tab-btn active" onclick="switchTab('tab-reading')"><i class="fa-solid fa-book-open"></i> Reading & Passage Analysis</button>
+            <button class="tab-btn" onclick="switchTab('tab-vocab')"><i class="fa-solid fa-shapes"></i> Vocabulary & Prefixes</button>
+            <button class="tab-btn" onclick="switchTab('tab-grammar')"><i class="fa-solid fa-wand-magic-sparkles"></i> Grammar & Simulator</button>
+            <button class="tab-btn" onclick="switchTab('tab-writing')"><i class="fa-solid fa-file-signature"></i> Writing (Interactive CV Builder)</button>
+            <button class="tab-btn" onclick="switchTab('tab-test')"><i class="fa-solid fa-list-check"></i> Practice Test</button>
+        </div>
+
+        <!-- TAB 1: READING & ANALYSIS -->
+        <div id="tab-reading" class="tab-content active">
+            <div class="card">
+                <div class="card-title"><i class="fa-solid fa-newspaper"></i> Period 1: Reading Passage Analysis</div>
+                
+                <div class="ar-teacher-box">
+                    <strong>👨‍🏫 الشرح :</strong> تتناول هذه المقالة قصتي نجاح ملهمتين في مجال التعليم والاقتصاد: الأولى هي دولة <strong>فنلندا (Finland)</strong> والثانية هي جزيرة <strong>تايوان (Taiwan)</strong>. على الرغم من الظروف المناخية الصعبة في فنلندا وضيق مساحة وموارد تايوان، إلا أن كليها تبوأ الصدارة عالمياً بفضل الاستثمار في التعليم.
+                </div>
+
+                <!-- Text Passage -->
+                <div class="text-passage">
+                    <h3 style="color: var(--latte-dark); margin-bottom: 15px; text-align: center;">Two success stories (and what we can learn from them)</h3>
+                    <p>
+                        Education Ministers who are hoping to improve their school <span class="highlight-yellow">systems</span> often look at Finland and Taiwan. The first is a small country in northern Europe with a cold climate and a language hardly anyone else speaks; the second is a very small island that until fairly recently had high levels of poverty and population. Yet today both of these countries come out at or near the top in international <span class="highlight-yellow">surveys</span> of economic success. Year after year, <span class="ref-pronoun">they</span> also score highly in educational results. Can this be an accident, or is there a <span class="highlight-yellow">connection</span>?
+                    </p>
+                    <br>
+                    <p>
+                        Finnish Education Minister Tuula Haatainen certainly believes there is. 'In Finland, we believe we have to <span class="highlight-yellow">invest in</span> education,' <span class="ref-pronoun">she</span> says. One reason she offers for Finland's success is that students don't begin 'real' school until they are 7, and all students between 7 and 16 get the same education. 'We don't <span class="highlight-yellow">divide</span> at an early stage between students who do well and those that don't manage so well,' she explains. 'Studies show that it is dangerous to divide too early into different educational paths.'
+                    </p>
+                    <br>
+                    <p>
+                        Like Finland, Taiwan has nine years of compulsory education, after <span class="ref-pronoun">which</span> (in both countries), students choose either an academic or vocational path. Very few choose to leave school in either country. One important difference, however, is in national tests, <span class="ref-pronoun">which</span> are very important in Taiwan but much less so in Finland.
+                    </p>
+                    <br>
+                    <p>
+                        Can other countries learn from the Finnish and Taiwanese experience? There are surely some lessons that can be learnt as long as we remember that just <span class="highlight-yellow">applying</span> one country's system <span class="highlight-yellow">to</span> another isn't a simple <span class="highlight-yellow">solution</span> to all problems.
+                    </p>
+                </div>
+
+                <!-- Vocabulary Table -->
+                <h3 style="color: var(--latte-dark); margin: 30px 0 15px 0;"><i class="fa-solid fa-spell-check"></i> Words & Meanings</h3>
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>Vocabulary Word</th>
+                            <th>English Definition</th>
+                            <th class="ar-col">المعنى بالعربي</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>systems</strong></td>
+                            <td>ways of organising something</td>
+                            <td class="ar-col">أنظمة / أنظمة تعليمية</td>
+                        </tr>
+                        <tr>
+                            <td><strong>surveys</strong></td>
+                            <td>studies / research investigations</td>
+                            <td class="ar-col">دراسات / استطلاعات رأي</td>
+                        </tr>
+                        <tr>
+                            <td><strong>connection</strong></td>
+                            <td>something that joins two things together</td>
+                            <td class="ar-col">صلة / علاقة / رابط</td>
+                        </tr>
+                        <tr>
+                            <td><strong>invest in</strong></td>
+                            <td>spend money with the hope of future benefits</td>
+                            <td class="ar-col">يستثمر في</td>
+                        </tr>
+                        <tr>
+                            <td><strong>divide</strong></td>
+                            <td>put in different groups / separate</td>
+                            <td class="ar-col">يقسّم / يفصل</td>
+                        </tr>
+                        <tr>
+                            <td><strong>applying... to</strong></td>
+                            <td>making something fit a different situation</td>
+                            <td class="ar-col">تطبيق (شيء) على (آخر)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>solution</strong></td>
+                            <td>an answer to a problem</td>
+                            <td class="ar-col">حل للمشكلة</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Pronoun References Table -->
+                <h3 style="color: var(--latte-dark); margin: 30px 0 15px 0;"><i class="fa-solid fa-hand-pointer"></i> Pronoun References (علامَ تعود الضمائر)</h3>
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>Pronoun</th>
+                            <th>Location in Text</th>
+                            <th>Refers to (يعود على)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>The first</strong></td>
+                            <td>Paragraph 1, Line 2</td>
+                            <td>Finland (فنلندا)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>the second</strong></td>
+                            <td>Paragraph 1, Line 3</td>
+                            <td>Taiwan (تايوان)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>they</strong></td>
+                            <td>Paragraph 1, Line 6</td>
+                            <td>Both countries (Finland and Taiwan)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>she</strong></td>
+                            <td>Paragraph 2, Line 2</td>
+                            <td>Tuula Haatainen (Finnish Education Minister)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>which (1)</strong></td>
+                            <td>Paragraph 3, Line 2</td>
+                            <td>Nine years of compulsory education</td>
+                        </tr>
+                        <tr>
+                            <td><strong>which (2)</strong></td>
+                            <td>Paragraph 3, Line 4</td>
+                            <td>National tests (الامتحانات الوطنية)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Textbook Activity 2 Solutions -->
+                <h3 style="color: var(--latte-dark); margin: 30px 0 15px 0;"><i class="fa-solid fa-check-double"></i> Activity 2 Textbook Solutions (True / False / Doesn't Say)</h3>
+                
+                <div class="q-box">
+                    <p>1. The writer suggests that the economic success of Finland and Taiwan is rather surprising.</p>
+                    <span style="color: #10B981; font-weight: bold;"><i class="fa-solid fa-circle-check"></i> TRUE</span>
+                    <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px;">Explanation: Paragraph 1 mentions the difficult climate in Finland and past poverty in Taiwan, making their economic success surprising.</p>
+                </div>
+
+                <div class="q-box">
+                    <p>2. The writer believes there is a connection between education and economic success.</p>
+                    <span style="color: #10B981; font-weight: bold;"><i class="fa-solid fa-circle-check"></i> TRUE</span>
+                    <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px;">Explanation: The passage explicitly connects high academic performance with national economic strength.</p>
+                </div>
+
+                <div class="q-box">
+                    <p>3. Tuula Haatainen thinks clever students should have special lessons.</p>
+                    <span style="color: #EF4444; font-weight: bold;"><i class="fa-solid fa-circle-xmark"></i> FALSE</span>
+                    <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px;">Explanation: She clearly states that all students between 7 and 16 receive the exact same education without early division.</p>
+                </div>
+
+                <div class="q-box">
+                    <p>4. The education systems in Finland and Taiwan have more differences than similarities.</p>
+                    <span style="color: #0284C7; font-weight: bold;"><i class="fa-solid fa-circle-info"></i> DOESN'T SAY</span>
+                    <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px;">Explanation: The article discusses similarities and differences but does not state which outweighs the other.</p>
+                </div>
+
+                <div class="q-box">
+                    <p>5. The writer says that other countries should copy the education systems of Finland and Taiwan.</p>
+                    <span style="color: #EF4444; font-weight: bold;"><i class="fa-solid fa-circle-xmark"></i> FALSE</span>
+                    <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px;">Explanation: The final sentence warns against simply applying one country's system to another.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TAB 2: VOCABULARY & PREFIXES -->
+        <div id="tab-vocab" class="tab-content">
+            <div class="card">
+                <div class="card-title"><i class="fa-solid fa-cubes"></i> Educational Stages & Prefixes</div>
+
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>Educational Stage</th>
+                            <th>Meaning / Age Group</th>
+                            <th class="ar-col">المرحلة بالعربي</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1. Pre-school / nursery / kindergarten</strong></td>
+                            <td>learning before 'real' school begins (e.g. age 4-5)</td>
+                            <td class="ar-col">الروضة / ما قبل المدرسة</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2. Primary education</strong></td>
+                            <td>first stage of school (e.g. age 6 to 11)</td>
+                            <td class="ar-col">التعليم الابتدائي</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3. Secondary education</strong></td>
+                            <td>next stage of school (e.g. age 12 to 18)</td>
+                            <td class="ar-col">التعليم الثانوي</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4. Compulsory education</strong></td>
+                            <td>children have to attend school by law</td>
+                            <td class="ar-col">التعليم الإلزامي (بالقانون)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5. Further / Higher education</strong></td>
+                            <td>going to college or university</td>
+                            <td class="ar-col">التعليم العالي / الجامعي</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 30px 0;">
+
+                <div class="card-title"><i class="fa-solid fa-puzzle-piece"></i> Prefixes (البادئات)</div>
+                
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>Prefix</th>
+                            <th>Meaning</th>
+                            <th>Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong style="color: var(--latte-medium);">pre-</strong></td>
+                            <td>before (قبل)</td>
+                            <td><strong>pre-school</strong> (ما قبل المدرسة), <strong>prepaid</strong> (مدفوع مسبقاً), <strong>prearranged</strong> (مرتب مسبقاً)</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color: var(--latte-medium);">post-</strong></td>
+                            <td>after (بعد)</td>
+                            <td><strong>postgraduate</strong> (دراسات عليا ما بعد الجامعية), <strong>post-war</strong> (ما بعد الحرب), <strong>postscript [PS]</strong> (ملاحظة بعد النص)</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color: var(--latte-medium);">ex-</strong></td>
+                            <td>used to be / former (سابق)</td>
+                            <td><strong>ex-employer</strong> (صاحب عمل سابق), <strong>ex-teacher</strong> (معلم سابق), <strong>ex-soldiers</strong> (جنود سابقون)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Activity 5 Solutions -->
+                <h4 style="margin: 25px 0 10px 0; color: var(--latte-dark);">Period 3 - Activity 5 Textbook Solutions:</h4>
+                <div class="q-box">
+                    <p>1. Life in the country was difficult in the <span style="color: var(--latte-medium); font-weight: bold;">post-war</span> period.</p>
+                    <p>2. After leaving school I kept in touch with my <span style="color: var(--latte-medium); font-weight: bold;">ex-teacher</span>.</p>
+                    <p>3. He didn't need to pay for the hotel room because it was <span style="color: var(--latte-medium); font-weight: bold;">prepaid</span> by his company.</p>
+                    <p>4. If you have signed a letter but then remember something you didn't include, you can add a <span style="color: var(--latte-medium); font-weight: bold;">postscript</span> (PS).</p>
+                    <p>5. We met at a <span style="color: var(--latte-medium); font-weight: bold;">prearranged</span> time and place.</p>
+                    <p>6. <span style="color: var(--latte-medium); font-weight: bold;">Ex-soldiers</span> sometimes find it difficult to manage in civilian life.</p>
+                </div>
+
+            </div>
+        </div>
+
+                <!-- TAB 3: GRAMMAR & SIMULATOR -->
+        <div id="tab-grammar" class="tab-content">
+            <div class="card">
+                <div class="card-title"><i class="fa-solid fa-sliders"></i> Period 2: Grammar Rules (Hope & Wish)</div>
+
+                <div class="ar-teacher-box">
+                    <strong>👨‍🏫 القاعدة  (Period 2):</strong><br>
+                    • <strong>Hope:</strong> تُستخدم للحديث عن أهداف وطموحات في المستقبل أو توقع ما نريد حدوثه (أو عدم حدوثه).<br>
+                    &nbsp;&nbsp;&nbsp;1. <code>hope + to + infinitive</code> للطموحات والأهداف.<br>
+                    &nbsp;&nbsp;&nbsp;2. <code>hope + subject + verb</code> للتعبير عما نريده في المستقبل (الفعل يكون في صيغة المستقبل <em>will / won't / going to</em> أو صيغة <em>المضارع البسيط Present tense</em>).<br>
+                    • <strong>Wish:</strong> تُستخدم للتعبير عن رغبة في تغيير واقع حالي موجود الآن.<br>
+                    &nbsp;&nbsp;&nbsp;1. <code>wish + Past Simple</code> للتعبير عن تغيير الواقع الحاضر.<br>
+                    &nbsp;&nbsp;&nbsp;2. الماضي من <code>can</code> هو <code>could</code> بعد wish.<br>
+                    &nbsp;&nbsp;&nbsp;3. فعل <code>to be</code> بعد wish يمكن أن يكون <code>was</code> أو <code>were</code>.
+                </div>
+
+                <!-- Examples Box from Textbook -->
+                <div class="rule-card">
+                    <h4><i class="fa-solid fa-lightbulb"></i> Textbook Examples (أمثلة الكتاب الوزاري):</h4>
+                    <ul style="padding-left: 20px; line-height: 2;">
+                        <li>Education Ministers are hoping <u>to improve</u> their school systems ...</li>
+                        <li>I hope it <u>won't happen</u>.</li>
+                        <li>Let's hope he <u>gets</u> the grades he needs.</li>
+                        <li>I wish our school <u>had</u> better equipment.</li>
+                        <li>The headteacher wishes the school <u>could buy</u> more computers.</li>
+                        <li>I wish I <u>wasn't/weren't</u> so bad at maths.</li>
+                        <li><em>"I hope it doesn't rain tomorrow."</em></li>
+                        <li><em>"I wish I understood this question."</em></li>
+                    </ul>
+                </div>
+
+                <!-- Complete the Grammar Rules (Activity 1) -->
+                <h3 style="color: var(--latte-dark); margin: 30px 0 15px 0;"><i class="fa-solid fa-list-check"></i> Activity 1: Complete the Grammar Rules (حل النشاط الأول من الكتاب)</h3>
+                <div class="q-box">
+                    <p>1. We use <em>hope</em> + the <span style="color: var(--latte-medium); text-decoration: underline;">infinitive (to + verb)</span> form of the verb to talk about aims or ambitions.</p>
+                </div>
+                <div class="q-box">
+                    <p>2. We use <em>hope</em> + subject + <span style="color: var(--latte-medium); text-decoration: underline;">verb</span> to say what we want to happen (or not happen) in the future.</p>
+                </div>
+                <div class="q-box">
+                    <p>3. The verb after <em>hope</em> can be in a future form (<em>will, won't, going to</em>) or the <span style="color: var(--latte-medium); text-decoration: underline;">present</span> tense.</p>
+                </div>
+                <div class="q-box">
+                    <p>4. We use <em>wish</em> + the <span style="color: var(--latte-medium); text-decoration: underline;">Past Simple</span> tense to say what we want to change about a present situation.</p>
+                </div>
+                <div class="q-box">
+                    <p>5. The past form of <em>can</em> is <span style="color: var(--latte-medium); text-decoration: underline;">could</span>.</p>
+                </div>
+                <div class="q-box">
+                    <p>6. After <em>wish</em>, the verb <em>to be</em> can be either <em>was</em> or <span style="color: var(--latte-medium); text-decoration: underline;">were</span>.</p>
+                </div>
+
+                <!-- Interactive Grammar Transformation Simulator -->
+                <div class="sim-box">
+                    <div style="font-weight: 800; color: var(--latte-dark); margin-bottom: 12px; font-size: 1.1rem;">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Interactive Grammar Transformation Simulator (محاكي التحويل القواعدي)
+                    </div>
+                    
+                    <select class="sim-selector" id="grammar-sim-select" onchange="runGrammarSim()">
+                        <option value="" disabled selected>-- اختر جملة لرؤية التحويل والشرح المفصل --</option>
+                        <option value="1">Fact: I don't understand this question. (Use Wish)</option>
+                        <option value="2">Fact: Our school doesn't have better equipment. (Use Wish)</option>
+                        <option value="3">Ambition: Education Ministers want to improve school systems. (Use Hope)</option>
+                        <option value="4">Future Want: I want it not to rain tomorrow. (Use Hope)</option>
+                    </select>
+
+                    <div class="sim-result" id="grammar-sim-output">
+                        <em>الرجاء اختيار إحدى الحالات من القائمة أعلاه لعرض النتيجة والشرح...</em>
+                    </div>
+                </div>
+
+                <!-- Activity 2 Textbook Exercises -->
+                <h3 style="color: var(--latte-dark); margin: 30px 0 15px 0;"><i class="fa-solid fa-pen-nib"></i> Activity 2: Complete the sentences with the correct form of the verbs in brackets</h3>
+
+                <div class="q-box">
+                    <p>1. I hope I <span style="color: var(--latte-medium); font-weight: bold;">get / will get</span> good marks in the test tomorrow. (get)</p>
+                    <span style="font-size: 0.88rem; color: var(--text-muted); font-weight: 600;">Reason: After 'hope' for future wants, we use Present Simple (get) or Future Simple (will get).</span>
+                </div>
+
+                <div class="q-box">
+                    <p>2. She wishes she <span style="color: var(--latte-medium); font-weight: bold;">didn't have</span> so much homework to do. (not/have)</p>
+                    <span style="font-size: 0.88rem; color: var(--text-muted); font-weight: 600;">Reason: 'wish' + Past Simple (didn't have) to change a present fact.</span>
+                </div>
+
+                <div class="q-box">
+                    <p>3. We don't invest enough in primary education. I hope we <span style="color: var(--latte-medium); font-weight: bold;">spend / will spend</span> more in future. (spend)</p>
+                    <span style="font-size: 0.88rem; color: var(--text-muted); font-weight: 600;">Reason: After 'hope' for future wants, we use Present Simple (spend) or Future (will spend).</span>
+                </div>
+
+                <div class="q-box">
+                    <p>4. After leaving university, I hope <span style="color: var(--latte-medium); font-weight: bold;">to become</span> a teacher. (become)</p>
+                    <span style="font-size: 0.88rem; color: var(--text-muted); font-weight: 600;">Reason: 'hope + to + infinitive' for ambitions and aims.</span>
+                </div>
+
+                <div class="q-box">
+                    <p>5. I don't know what he's saying. I wish I <span style="color: var(--latte-medium); font-weight: bold;">could</span> understand French. (can)</p>
+                    <span style="font-size: 0.88rem; color: var(--text-muted); font-weight: 600;">Reason: The past form of 'can' is 'could' after 'wish'.</span>
+                </div>
+
+                <div class="q-box">
+                    <p>6. Most parents of young children hope they <span style="color: var(--latte-medium); font-weight: bold;">do / will do</span> well at school. (do)</p>
+                    <span style="font-size: 0.88rem; color: var(--text-muted); font-weight: 600;">Reason: After 'hope' for future expectations, we use Present Simple (do) or Future (will do).</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TAB 4: INTERACTIVE CV BUILDER -->
+        <div id="tab-writing" class="tab-content">
+            <div class="card">
+                <div class="card-title"><i class="fa-solid fa-file-contract"></i> Period 3: Build a CV</div>
+
+                <!-- 5 Tips Table -->
+                <h3 style="color: var(--latte-dark); margin-bottom: 15px;">Top 5 Tips for a Good CV:</h3>
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>Tip / Advice</th>
+                            <th>Matched Reason / Continuation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1. Keep it short (2 pages maximum):</strong></td>
+                            <td>they don't want your life story.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2. Don't send the same CV every time:</strong></td>
+                            <td>every job or course has different needs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3. Put things in the most positive way:</strong></td>
+                            <td>to make yourself stand out (but don't lie!).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4. Include a personal statement:</strong></td>
+                            <td>write something about what you are interested in and hope to do in future.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5. Make sure there are no spelling or grammar mistakes:</strong></td>
+                            <td>it looks very bad.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Blank Editable CV Sheet -->
+                <div class="cv-builder-container">
+                    <h3 style="color: var(--latte-dark); margin: 25px 0 10px 0;"><i class="fa-solid fa-pen-to-square"></i> Fill Your CV Details:</h3>
+                    
+                    <div class="cv-sheet-editable" id="cv-to-export">
+                        <input type="text" class="cv-input" style="font-size: 1.4rem; font-weight: 800; color: var(--latte-dark);" placeholder="Full Name (e.g. your name)" id="cv-name">
+                        
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <input type="text" class="cv-input" style="flex: 1;" placeholder="Date of Birth" id="cv-dob">
+                            <input type="text" class="cv-input" style="flex: 1;" placeholder="Address (e.g. Gaza, Palestine)" id="cv-address">
+                        </div>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <input type="text" class="cv-input" style="flex: 1;" placeholder="Email Address" id="cv-email">
+                            <input type="text" class="cv-input" style="flex: 1;" placeholder="Telephone Number" id="cv-phone">
+                        </div>
+
+                        <div class="cv-sec-header">Personal Statement</div>
+                        <textarea class="cv-textarea" placeholder="Write something about what you are interested in and hope to do in future..." id="cv-statement"></textarea>
+
+                        <div class="cv-sec-header">Education (Write in Reverse Order)</div>
+                        <textarea class="cv-textarea" placeholder="e.g. 2023 - Present: Grade 11 (Scientific Stream), High School..." id="cv-education"></textarea>
+
+                        <div class="cv-sec-header">Work Experience / Volunteering</div>
+                        <textarea class="cv-textarea" placeholder="e.g. Summer 2025: Volunteer Assistant in..." id="cv-experience"></textarea>
+
+                        <div class="cv-sec-header">Other Skills & Qualifications</div>
+                        <textarea class="cv-textarea" placeholder="e.g. Languages: Arabic, English | Computer Skills: Word, Web Coding..." id="cv-skills"></textarea>
+                    </div>
+
+                    <button class="btn-download-cv" onclick="exportCVAsImage()">
+                        <i class="fa-solid fa-camera"></i> (Download CV as Image)
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TAB 5: PRACTICE TEST -->
+        <div id="tab-test" class="tab-content">
+            <div class="card">
+                <div class="card-title"><i class="fa-solid fa-circle-check"></i> Unit 2 Practice Test</div>
+                <p style="margin-bottom: 20px; color: var(--text-muted);">اختر الإجابة الصحيحة لاختبار مدى فهمك لمواضيع الوحدة الثانية:</p>
+
+                <!-- Q1 -->
+                <div class="q-box">
+                    <p>1. Complete with the correct prefix: After university, he enrolled in a __________ program.</p>
+                    <div>
+                        <button class="opt-btn" onclick="checkAnswer(this, false, 'q1')">pregraduate</button>
+                        <button class="opt-btn" onclick="checkAnswer(this, true, 'q1')">postgraduate</button>
+                        <button class="opt-btn" onclick="checkAnswer(this, false, 'q1')">exgraduate</button>
+                    </div>
+                    <div class="solution-explain" id="q1-explain">Correct! 'postgraduate' means studies undertaken after completing a university degree.</div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="q-box">
+                    <p>2. Choose the correct grammar form: I wish I __________ more time to study for exams.</p>
+                    <div>
+                        <button class="opt-btn" onclick="checkAnswer(this, true, 'q2')">had</button>
+                        <button class="opt-btn" onclick="checkAnswer(this, false, 'q2')">have</button>
+                        <button class="opt-btn" onclick="checkAnswer(this, false, 'q2')">will have</button>
+                    </div>
+                    <div class="solution-explain" id="q2-explain">Correct! 'wish' requires the Past Simple ('had') to express a present desire for change.</div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="q-box">
+                    <p>3. Choose the correct grammar form: I hope __________ high marks in Grade 11 exams.</p>
+                    <div>
+                        <button class="opt-btn" onclick="checkAnswer(this, false, 'q3')">getting</button>
+                        <button class="opt-btn" onclick="checkAnswer(this, true, 'q3')">to get</button>
+                        <button class="opt-btn" onclick="checkAnswer(this, false, 'q3')">got</button>
+                    </div>
+                    <div class="solution-explain" id="q3-explain">Correct! 'hope' is followed by 'to + infinitive' when talking about ambitions.</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
