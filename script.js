@@ -43,19 +43,85 @@ function runGrammarSim() {
     }
 }
 
-// Export CV Sheet as HD Image using html2canvas
-function exportCVAsImage() {
+// Export a printable copy so html2canvas captures every line in the form fields.
+async function exportCVAsImage() {
     const cvElement = document.getElementById('cv-to-export');
-    
-    html2canvas(cvElement, {
-        scale: 2,
-        backgroundColor: "#FFFFFF"
-    }).then(canvas => {
+    const downloadButton = document.querySelector('.btn-download-cv');
+
+    if (!cvElement || typeof html2canvas === 'undefined') {
+        alert('تعذر تجهيز الصورة. حدّث الصفحة وحاول مرة أخرى.');
+        return;
+    }
+
+    const exportCopy = cvElement.cloneNode(true);
+    exportCopy.removeAttribute('id');
+    exportCopy.classList.add('cv-export-copy');
+
+    exportCopy.querySelectorAll('input, textarea').forEach(field => {
+        const text = document.createElement('div');
+        text.className = 'cv-export-value';
+        text.textContent = field.value.trim() || field.placeholder || '';
+        text.style.cssText = [
+            'width: 100%',
+            'min-height: 42px',
+            'margin-bottom: 10px',
+            'padding: 10px',
+            'border: 1px solid #E6D5C3',
+            'border-radius: 8px',
+            'background: #FAF6F0',
+            'color: #2C1810',
+            'font: inherit',
+            'white-space: pre-wrap',
+            'overflow-wrap: anywhere'
+        ].join(';');
+
+        if (field.tagName === 'TEXTAREA') {
+            text.style.minHeight = '80px';
+        }
+        if (field.id === 'cv-name') {
+            text.style.fontSize = '1.4rem';
+            text.style.fontWeight = '800';
+            text.style.color = '#5C3D2E';
+        }
+
+        field.replaceWith(text);
+    });
+
+    Object.assign(exportCopy.style, {
+        position: 'fixed',
+        left: '-10000px',
+        top: '0',
+        width: `${cvElement.getBoundingClientRect().width}px`,
+        height: 'auto',
+        maxHeight: 'none',
+        overflow: 'visible',
+        transform: 'none',
+        animation: 'none'
+    });
+    document.body.appendChild(exportCopy);
+
+    if (downloadButton) downloadButton.disabled = true;
+
+    try {
+        const canvas = await html2canvas(exportCopy, {
+            scale: 2,
+            backgroundColor: '#FFFFFF',
+            windowWidth: Math.max(document.documentElement.clientWidth, exportCopy.scrollWidth),
+            windowHeight: Math.max(document.documentElement.clientHeight, exportCopy.scrollHeight),
+            scrollY: 0
+        });
+
         const link = document.createElement('a');
         link.download = 'My_CV_Grade11.png';
         link.href = canvas.toDataURL('image/png');
         link.click();
-    });
+    } catch (error) {
+        console.error('CV image export failed:', error);
+        alert('تعذر تنزيل الصورة. حاول مرة أخرى.');
+    } finally {
+        exportCopy.remove();
+        if (downloadButton) downloadButton.disabled = false;
+    }
 }
 
 // Quiz Practice Checker
